@@ -22,15 +22,20 @@ public class Extruder : MonoBehaviour
 
 	void Awake()
 	{
-		mesh = GetComponent<MeshFilter>().mesh;
+		mesh = GetComponent<MeshFilter>().sharedMesh;
+		if (mesh == null)
+			mesh = GetComponent<MeshFilter>().mesh;
+
+
 		//transform.position = Vector3.zero;
 	}
 
-	void Update()
+	void Start()
 	{
 		UpdateMesh();
+		GenerateIndices();
 		UpdateUv();
-		//VertexOffset();
+		mesh.RecalculateBounds();
 	}
 
 	void GenerateIndices()
@@ -83,8 +88,13 @@ public class Extruder : MonoBehaviour
 	}
 
 
+	public bool needUpdate = true;
+
 	void OnDrawGizmos()
 	{
+		if (!needUpdate) return;
+		needUpdate = false;
+
 		if (Application.isEditor)
 		{
 			Awake();
