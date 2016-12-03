@@ -7,7 +7,7 @@ public class WiggleChildren : MonoBehaviour
 
 	void Start()
 	{
-		
+
 	}
 
 	void Update()
