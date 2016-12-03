@@ -19,17 +19,18 @@ Shader "Sprites/Default-Paper"
 		}
 
 		Cull Off
-		Lighting Off
+		//Lighting Off
 		ZWrite On
 		Fog { Mode Off }
-		Blend SrcAlpha OneMinusSrcAlpha
+		//Blend SrcAlpha OneMinusSrcAlpha
 
 		Pass
 		{
 		CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma multi_compile DUMMY PIXELSNAP_ON
+			//#pragma multi_compile DUMMY PIXELSNAP_ON
+			#pragma multi_compile_fog
 			#include "UnityCG.cginc"
 
 			struct appdata_t
@@ -39,18 +40,23 @@ Shader "Sprites/Default-Paper"
 				float2 texcoord : TEXCOORD0;
 			};
 
-			struct v2f
+			struct Vertex2Fragment
 			{
 				float4 vertex   : SV_POSITION;
 				fixed4 color    : COLOR;
 				half2 texcoord  : TEXCOORD0;
+				half fog : NUMBER;
+				//float2 depth : TEXCOORD1;
+
+				//Used to pass fog amount around number should be a free texcoord.
+				UNITY_FOG_COORDS(1)
 			};
 
 			fixed4 _Color;
 
-			v2f vert(appdata_t IN)
+			Vertex2Fragment vert(appdata_t IN)
 			{
-				v2f OUT;
+				Vertex2Fragment OUT;
 				OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
 				OUT.texcoord = IN.texcoord;
 				OUT.color = IN.color * _Color;
@@ -58,14 +64,24 @@ Shader "Sprites/Default-Paper"
 				OUT.vertex = UnityPixelSnap (OUT.vertex);
 				#endif
 
+				float4 hpos = UnityObjectToClipPos(IN.vertex);
+				hpos.xy /= hpos.w;
+				OUT.fog = min(1, dot(hpos.xy, hpos.xy)*0.5);
+				//UNITY_TRANSFER_DEPTH(OUT.depth);
+				UNITY_TRANSFER_FOG(OUT, OUT.vertex);
 				return OUT;
 			}
 
 			sampler2D _MainTex;
 
-			fixed4 frag(v2f IN) : COLOR
+			fixed4 frag(Vertex2Fragment IN) : COLOR
 			{
-				return tex2D(_MainTex, IN.texcoord) * IN.color;
+				//UNITY_OUTPUT_DEPTH(IN.depth * 2);
+				fixed4 col = tex2D(_MainTex, IN.texcoord) * IN.color;
+				float alpha = col.a;
+				clip(alpha - 0.5);
+				UNITY_APPLY_FOG(IN.fogCoord, col);
+				return col; // *IN.depth.x;
 			}
 		ENDCG
 		}
