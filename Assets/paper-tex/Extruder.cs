@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Extruder : MonoBehaviour
 {
+	public GameObject colliderTemplate;
+
 	private Mesh mesh;
 	public Vector3 direction = new Vector3(20, 0, 0);
 	public float scaleUv = 1;
@@ -29,6 +31,7 @@ public class Extruder : MonoBehaviour
 
 		//transform.position = Vector3.zero;
 	}
+	public float thickness = 0.5f;
 
 	void Start()
 	{
@@ -36,6 +39,25 @@ public class Extruder : MonoBehaviour
 		GenerateIndices();
 		UpdateUv();
 		mesh.RecalculateBounds();
+
+		if (this.colliderTemplate)
+		{
+			for (int index = 0; index < points.Length - 1; index++)
+			{
+				var pt = points[index].pos;
+				var pt2 = points[index + 1].pos;
+				var vec = pt2 - pt;
+				var norm = Vector3.Cross(vec, this.direction).normalized;
+				var mean = (pt + pt2) / 2 + direction / 2;
+				var newVec = transform.TransformDirection(vec);
+				var angle = Mathf.Atan2(newVec.y, newVec.x) * Mathf.Rad2Deg;
+				var q = Quaternion.Euler(0, 0, angle);
+				var newMean = transform.TransformPoint(mean);
+				var farPoint = transform.TransformPoint(mean + norm * (thickness / 2 + 0.01f));
+				var inst = Instantiate(this.colliderTemplate, farPoint, q, transform.parent);
+				inst.transform.localScale = new Vector3(vec.magnitude, thickness, direction.magnitude);
+			}
+		}
 	}
 
 	void GenerateIndices()
