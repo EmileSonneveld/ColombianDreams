@@ -575,9 +575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Flight information
-
-'
+  m_Text: Flight information
 --- !u!222 &90322020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -876,12 +874,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375887941}
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1375887946}
+        m_MethodName: MovieButton_Click
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -908,7 +906,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b59535792f46f024f937d22c7fc4aa08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0506fc8ff220f4c259efb064c5f48c56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1614,12 +1612,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375887941}
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1375887946}
+        m_MethodName: MovieButton_Click
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1646,7 +1644,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b59535792f46f024f937d22c7fc4aa08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0506fc8ff220f4c259efb064c5f48c56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2094,7 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2103,24 +2101,21 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
+    m_BestFit: 1
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '<b>Colombia</b>
-
-
-    Population: lalalal
-
-
-    samba lalala'
+    m_LineSpacing: 1.2
+  m_Text: "<b>Colombia</b>\n\nCapital: Bogota\nOfficial language: Spanish\n+68 ethnic
+    languages and dialects\nPopulation: 48 786 100 Colombians\n+83 different indigenous
+    communities \nCurrency: Colombian Peso (1EUR = 3270 COP)\nTime zone: UTC-5 (6
+    hours earlier than in Paris)"
 --- !u!222 &643628760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2365,9 +2360,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Information of destination
-
-'
+  m_Text: Destination overview
 --- !u!222 &801065417
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2816,9 +2809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Condor
-
-'
+  m_Text: Condor
 --- !u!222 &932103940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2964,12 +2955,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375887941}
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1375887946}
+        m_MethodName: MovieButton_Click
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2996,7 +2987,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b59535792f46f024f937d22c7fc4aa08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82244ad477304b942a7abd69e54c0c19, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3275,7 +3266,7 @@ RectTransform:
   m_Children:
   - {fileID: 1928811523}
   m_Father: {fileID: 1333406052}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3524,7 +3515,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 106, y: -134}
-  m_SizeDelta: {x: 178, y: 47}
+  m_SizeDelta: {x: 178, y: 67.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174369662
 MonoBehaviour:
@@ -3597,7 +3588,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b59535792f46f024f937d22c7fc4aa08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d7a8a860116d4497af10bc7e815aa72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4080,6 +4071,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 643628758}
+  - {fileID: 2110129287}
   - {fileID: 1088272597}
   m_Father: {fileID: 221436134}
   m_RootOrder: 1
@@ -4289,7 +4281,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 600
-  field of view: 96
+  field of view: 24
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4312,7 +4304,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1380760431}
   m_LocalRotation: {x: -0, y: -0.99973786, z: 0.022896294, w: 0}
-  m_LocalPosition: {x: -2.851, y: 1.601, z: 17.018}
+  m_LocalPosition: {x: -3.11, y: 1.04, z: 16.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4684,12 +4676,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375887941}
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1375887946}
+        m_MethodName: MovieButton_Click
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4716,7 +4708,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b59535792f46f024f937d22c7fc4aa08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30f9ec79c4aa84b1c843e661160e8bc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6222,6 +6214,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097334682}
+--- !u!1 &2110129286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2110129287}
+  - component: {fileID: 2110129289}
+  - component: {fileID: 2110129288}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2110129287
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110129286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1333406052}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 200, y: 100}
+  m_SizeDelta: {x: 120, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2110129288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110129286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: c297a974e305043eba57016208c0c12c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2110129289
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110129286}
 --- !u!1001 &2117943601
 Prefab:
   m_ObjectHideFlags: 0
@@ -6320,7 +6380,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 105.99977, y: -235}
-  m_SizeDelta: {x: 178, y: 47}
+  m_SizeDelta: {x: 178, y: 67.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126253070
 MonoBehaviour:
@@ -6393,7 +6453,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b59535792f46f024f937d22c7fc4aa08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d7a8a860116d4497af10bc7e815aa72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
