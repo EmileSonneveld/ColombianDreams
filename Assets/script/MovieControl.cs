@@ -6,8 +6,8 @@ using UnityEngine;
 public class MovieControl : MonoBehaviour
 {
 
-	
-	MovieTexture movTexture = null;
+#if EDITOR
+	public MovieTexture movTexture = null;
 
 	void Start()
 	{
@@ -17,7 +17,7 @@ public class MovieControl : MonoBehaviour
 		GetComponent<Renderer>().material.mainTexture = movTexture;
 		movTexture.Play();
 	}
-
+#endif
 	void Update()
 	{
 
