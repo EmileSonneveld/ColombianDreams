@@ -9,9 +9,18 @@ public class PlayerController : MonoBehaviour
 	public Camera cameraFree;
 	private Camera targetCamera;
 	private Camera cam;
-	void Start()
+
+	public GameObject[] activeStanding = new GameObject[0];
+	public GameObject[] activeSitting = new GameObject[0];
+
+	void Awake()
 	{
 		cam = this.GetComponentInChildren<Camera>();
+	}
+
+	void Start()
+	{
+		ActivateSitting();
 	}
 
 	void Update()
@@ -32,6 +41,26 @@ public class PlayerController : MonoBehaviour
 	public void TargetFree()
 	{
 		targetCamera = cameraFree;
+	}
+
+	public void ActivateSitting()
+	{
+		foreach (var go in activeStanding)
+			if (go != null)
+				go.SetActive(false);
+		foreach (var go in activeSitting)
+			if (go != null)
+				go.SetActive(true);
+	}
+
+	public void ActivateStanding()
+	{
+		foreach (var go in activeStanding)
+			if (go != null)
+				go.SetActive(true);
+		foreach (var go in activeSitting)
+			if (go != null)
+				go.SetActive(false);
 	}
 
 }
