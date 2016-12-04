@@ -43,24 +43,28 @@ public class CanvasLogic : MonoBehaviour
 		destinationInfoPanel.SetActive(false);
 		mainPanel.SetActive(true);
 	}
-	public void MovieButton_Click(){
+
+	public void MovieButton_Click()
+	{
 		string movie;
-		switch (this.name) {
-		case "ButtonJaguar":
-			movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
-			break;
-		case "ButtonFrog":
-			movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
-			break;
-		case "ButtonSnake":
-			movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
-			break;
-		case "ButtonCondor":
-			movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
-			break;
-		default:
-			break;
+		switch (this.name)
+		{
+			case "ButtonJaguar":
+				movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
+				break;
+			case "ButtonFrog":
+				movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
+				break;
+			case "ButtonSnake":
+				movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
+				break;
+			case "ButtonCondor":
+				movie = "StreamingAssets/Trailer Colombia Magia Salvaje.mp4";
+				break;
+			default:
+				break;
 		}
 	}
+	
 
 }

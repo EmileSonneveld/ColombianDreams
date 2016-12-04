@@ -39,7 +39,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 9
   spritePivot: {x: 0.4827068, y: 0.23413101}
   spriteBorder: {x: 0, y: 0, z: 0, w: 314}
@@ -120,7 +120,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     outline: []
-  spritePackingTag: 
+  spritePackingTag: plane
   userData: 
   assetBundleName: 
   assetBundleVariant: 
