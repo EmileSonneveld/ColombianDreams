@@ -317,6 +317,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraUi: {fileID: 0}
   cameraFree: {fileID: 20858436910548304}
+  activeStanding:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  activeSitting:
+  - {fileID: 1923548836431422}
+  - {fileID: 1181707347902406}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!124 &124389455131209400
 Behaviour:
   m_ObjectHideFlags: 1
